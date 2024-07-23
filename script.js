@@ -31,9 +31,9 @@ pics.forEach((pic) =>{
 	}if(selectedDogLength >1 || selectedXLength>1){
 		verifyBtn.removeAttribute('id');
 	}if(totalLength == 1){
-		verifyBtn.id="btn"
+		verifyBtn.id="verify"
 	}if(totalLength == 0){
-		resetBtn.id = "btn"
+		resetBtn.id = "reset"
 	}
 	});
 })

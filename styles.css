@@ -39,6 +39,6 @@ button {
   margin: 20px;
 }
 
-#btn{
+#reset, #verify{
 	display: none;
 }
