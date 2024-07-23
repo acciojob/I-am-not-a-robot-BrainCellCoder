@@ -39,6 +39,11 @@ button {
   margin: 20px;
 }
 
+.botton{
+	display: flex;
+	justify-content: center
+}
+
 #reset, #verify{
 	display: none;
 }

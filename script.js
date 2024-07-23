@@ -47,8 +47,8 @@ resetBtn.addEventListener("click", () =>{
 	pics.forEach((pic) =>{
 		pic.classList.remove("selected");
 	})
-	resetBtn.id="btn"
-	verifyBtn.id="btn"
+	resetBtn.id="reset"
+	verifyBtn.id="verify"
 	msg.innerText=""
 })
 
@@ -58,4 +58,5 @@ verifyBtn.addEventListener("click", () =>{
 	}else{
 		msg.innerText = "We can't verify you as a human. You selected the non-identical tiles."
 	}
+	verifyBtn.id="verify"
 })
