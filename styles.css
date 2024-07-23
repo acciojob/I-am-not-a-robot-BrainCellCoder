@@ -38,3 +38,7 @@ p {
 button {
   margin: 20px;
 }
+
+#btn{
+	display: none;
+}
