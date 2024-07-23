@@ -14,7 +14,7 @@ pics.forEach((pic) =>{
 			}
 			pic.classList.remove("selected");
 		}else{
-			pic.classList.add("selected");
+			pic.classList.add("selected")
 			if(pic.id == "x"){
 				selectedX.push(pic.id)
 			}else if(pic.id == "dog"){
@@ -24,22 +24,24 @@ pics.forEach((pic) =>{
 	const selectedDogLength = selectedDog.length;
 	const selectedXLength = selectedX.length;
 		const totalLength = selectedDog.length + selectedX.length;
-	const resetBtn = document.querySelector(".reset")
-	const verifyBtn = document.querySelector(".verify")
+	const resetBtn = document.querySelector("#reset")
+	const verifyBtn = document.querySelector("#verify")
 	if(selectedDogLength ==1 || selectedXLength==1 ){
-		resetBtn.removeAttribute('id');
+		// resetBtn.removeAttribute('id');
+		resetBtn.classList.remove("hide");
 	}if(selectedDogLength >1 || selectedXLength>1){
-		verifyBtn.removeAttribute('id');
+		// verifyBtn.removeAttribute('id');
+		verifyBtn.classList.remove("hide");
 	}if(totalLength == 1){
-		verifyBtn.id="verify"
+		verifyBtn.classList.add("hide");
 	}if(totalLength == 0){
-		resetBtn.id = "reset"
+		resetBtn.classList.add("hide");
 	}
 	});
 })
 
-const resetBtn = document.querySelector(".reset")
-const verifyBtn = document.querySelector(".verify")
+const resetBtn = document.querySelector("#reset")
+const verifyBtn = document.querySelector("#verify")
 
 resetBtn.addEventListener("click", () =>{
 	selectedDog.length=0
@@ -47,8 +49,8 @@ resetBtn.addEventListener("click", () =>{
 	pics.forEach((pic) =>{
 		pic.classList.remove("selected");
 	})
-	resetBtn.id="reset"
-	verifyBtn.id="verify"
+	resetBtn.classList.add("hide");
+	verifyBtn.classList.add("hide");
 	msg.innerText=""
 })
 
@@ -58,5 +60,5 @@ verifyBtn.addEventListener("click", () =>{
 	}else{
 		msg.innerText = "We can't verify you as a human. You selected the non-identical tiles."
 	}
-	verifyBtn.id="verify"
+	verifyBtn.classList.add("hide");
 })
